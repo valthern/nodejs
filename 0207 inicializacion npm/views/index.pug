@@ -4,11 +4,12 @@ html
         title #{titulo}
         meta(charset="utf-8")
         link(rel="stylesheet" href="main.css")
-body
-    main
-        h1 #{titulo}
-        figure
-            img(src=imagen)
-            figcaption #{texto}
-        each perro in perros 
-            li #{perro.raza} &nbsp; | &nbsp;
+    body
+        main
+            h1 #{titulo}
+            figure
+                img(src=imagen)
+                figcaption #{texto}
+            each perro in perros 
+                li 
+                    a(href="perro/" + perro.raza) #{perro.raza} &nbsp; | &nbsp;
